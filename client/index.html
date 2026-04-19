@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KAT KUT</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1e1e1e;
+            color: #fff;
+        }
+
+        #topBar {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            background: #2b2b2b;
+            border-bottom: 1px solid #444;
+        }
+
+        button {
+            padding: 8px 12px;
+            border: none;
+            background: #3a3a3a;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        #settingsPanel {
+            padding: 10px;
+            background: #252525;
+            border-bottom: 1px solid #444;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        #settingsPanel input {
+            width: 100%;
+            padding: 5px;
+            background: #333;
+            border: 1px solid #555;
+            color: white;
+        }
+
+        #container {
+            padding: 10px;
+            overflow-y: auto;
+            max-height: 500px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 80px 80px 1fr;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+
+        .row input {
+            padding: 5px;
+            border: 1px solid #555;
+            background: #2b2b2b;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="topBar">
+        <button id="renderBtn">Render + Transcribe</button>
+        <button id="generate">Generate Subtitles</button>
+    </div>
+
+    <div id="settingsPanel">
+
+        <strong>Subtitle Style</strong>
+
+        <label>Font</label>
+        <input type="text" id="font" value="ArialMT">
+
+        <label>Font Size</label>
+        <input type="number" id="fontSize" value="60">
+
+        <label>Text Color</label>
+        <input type="color" id="color" value="#ffffff">
+
+        <label>
+            <input type="checkbox" id="stroke" checked>
+            Enable Stroke
+        </label>
+
+        <label>Stroke Width</label>
+        <input type="number" id="strokeWidth" value="3">
+
+    </div>
+
+    <div id="container"></div>
+
+    <!-- CEP Interface -->
+    <script src="CSInterface.js"></script>
+
+    <!-- Main Logic -->
+    <script src="main.js"></script>
+
+</body>
+</html>

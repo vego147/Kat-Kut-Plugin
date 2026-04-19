@@ -1,0 +1,74 @@
+# =========================
+# Node.js
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Build / Output
+# =========================
+dist/
+build/
+out/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Editor / IDE
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# =========================
+# Adobe / After Effects
+# =========================
+*.aep~
+*.aet~
+*.tmp
+
+# CEP Debug Files (optional)
+CSXS/logs/
+
+# =========================
+# Cache / Temp
+# =========================
+.cache/
+.tmp/
+temp/
+
+# =========================
+# Binary / Packaged files
+# =========================
+*.exe
+*.zip
+*.7z
+
+# =========================
+# Optional: Python (safe to keep just in case)
+# =========================
+__pycache__/
+*.pyc
